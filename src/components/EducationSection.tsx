@@ -20,24 +20,23 @@ const EducationSection = () => (
       <div className="flex-1">
         <div className="bg-[rgba(35,36,58,0.95)] rounded-2xl shadow-[0_2px_16px_#4fd1c522] p-8 text-white font-sans max-w-xl mx-auto">
           <div className="flex items-center gap-4 mb-2">
-            <span className="text-cyan-400 font-bold text-base">2022 - 2026 (Expected)</span>
+            <span className="text-cyan-400 font-bold text-base">2022 – 2026</span>
             <span className="text-2xl text-[#a6c1ee] ml-2">🎓</span>
           </div>
           <div className="text-xl font-extrabold text-white mb-1 leading-tight">BSc in Computer Science & Artificial Intelligence</div>
           <div className="text-[#a6c1ee] font-bold text-base mb-2 leading-tight">Faculty of Computer Science and Artificial Intelligence, Cairo University</div>
-          <div className="text-[#f3f3f3] text-base mb-2">GPA: 3.4/4.0</div>
+          <div className="text-[#f3f3f3] text-base mb-2">GPA: 3.53/4.0 (Excellent) — Top 20 out of 180 students</div>
           <div className="text-cyan-400 font-bold text-base mb-1">Major: Artificial Intelligence</div>
-          <div className="text-[#a6c1ee] font-semibold text-base mb-2">Year: Senior (4th Year)</div>
           <div className="text-[#f3f3f3] text-sm mt-2 leading-relaxed">
             <div className="font-bold text-cyan-400 mb-1">Key Coursework:</div>
             <ul className="list-disc pl-6">
               <li>Machine Learning & Deep Learning</li>
-              <li>Data Structures & Algorithms</li>
+              <li>Natural Language Processing</li>
               <li>Computer Vision & Image Processing</li>
+              <li>Data Structures & Algorithms</li>
               <li>Database Management & Data Analysis</li>
               <li>Mathematics for ML & Data Science</li>
               <li>Software Engineering</li>
-              <li>Operating Systems</li>
             </ul>
           </div>
         </div>

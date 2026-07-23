@@ -4,9 +4,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohamed Atef",
-  description: "Portfolio of Mohamed Atef, Machine Learning Engineer. Explore projects, skills, certifications, and experience in AI, web development, and more.",
+  description: "Portfolio of Mohamed Atef, AI Engineer specializing in LLMs, RAG systems, and Agentic AI. Explore projects, skills, certifications, and experience.",
   keywords: [
-    "Mohamed Atef", "Portfolio", "Machine Learning", "AI", "Artificial Intelligence", "Web Development", "React", "Next.js", "Deep Learning", "Projects", "Certifications", "Skills", "Cairo University", "Frontend", "Backend", "Software Engineer"
+    "Mohamed Atef", "Portfolio", "AI Engineer", "LLM", "RAG", "LangChain", "Agentic AI", "NLP", "Computer Vision", "Deep Learning", "Python", "FastAPI", "Cairo University", "Machine Learning"
   ],
   authors: [{ name: "Mohamed Atef", url: "https://www.linkedin.com/in/mohamed-atef-mawad" }],
   creator: "Mohamed Atef",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, noimageindex: false }
   },
   openGraph: {
-    title: "Mohamed Atef",
-    description: "Portfolio of Mohamed Atef, Machine Learning Engineer. Explore projects, skills, certifications, and experience in AI, web development, and more.",
-    url: "https://your-portfolio-domain.com/",
+    title: "Mohamed Atef — AI Engineer",
+    description: "Portfolio of Mohamed Atef, AI Engineer specializing in LLMs, RAG systems, and Agentic AI. Explore projects, skills, certifications, and experience.",
+    url: "https://portfolio-mohamed-atef.vercel.app/",
     siteName: "Mohamed Atef Portfolio",
     images: [
       {
@@ -34,9 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mohamed Atefr",
-    description: "Portfolio of Mohamed Atef, Machine Learning Engineer. Explore projects, skills, certifications, and experience in AI, web development, and more.",
-    creator: "@your_twitter_handle",
+    title: "Mohamed Atef — AI Engineer",
+    description: "Portfolio of Mohamed Atef, AI Engineer specializing in LLMs, RAG systems, and Agentic AI.",
     images: [
       {
         url: "/my_photo.jpg",
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://your-portfolio-domain.com/"
+    canonical: "https://portfolio-mohamed-atef.vercel.app/"
   }
 };
 

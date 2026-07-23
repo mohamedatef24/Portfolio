@@ -8,7 +8,7 @@ const AboutSection = () => (
       <div className="flex-2 min-w-[320px] mb-6 md:mb-0">
         <div className="text-cyan-400 font-extrabold text-2xl mb-4 font-sans">WHO AM I?</div>
         <div className="text-[#f3f3f3] text-base md:text-lg leading-relaxed font-sans">
-          Mohamed Atef is a senior Artificial Intelligence student at Cairo University, currently in his fourth year. He is passionate about leveraging AI to solve real-world problems and is currently working on an Arabic Sign Language Converter project. This project aims to bridge the communication gap between the deaf or hard-of-hearing community and the wider population, reflecting his commitment to impactful, inclusive technology.
+          Mohamed Atef is an AI Engineer and a recent graduate from Cairo University&apos;s Faculty of Computer Science and Artificial Intelligence (Top 20 out of 180 students). He specializes in building production-grade AI systems — from Retrieval-Augmented Generation (RAG) pipelines and multi-agent architectures to Arabic NLP solutions. With hands-on experience deploying LLM-powered applications using LangChain, FastAPI, and Docker, he bridges the gap between research and real-world impact.
         </div>
       </div>
       <AboutMePhoto />

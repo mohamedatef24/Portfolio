@@ -21,29 +21,41 @@ const ExperiencesSection = () => (
     <SectionHeader label="Experiences" />
     <section className="relative mt-16 min-h-[420px]">
       <div className="absolute left-0 top-0 w-full h-full bg-[repeating-linear-gradient(0deg,_#fff1_0_1px,_transparent_1px_40px),_repeating-linear-gradient(90deg,_#fff1_0_1px,_transparent_1px_40px)] opacity-10 z-0 pointer-events-none" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[1100px] mx-auto relative z-10 items-center justify-center">
-        {/* Experience Card 1 */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1100px] mx-auto relative z-10 items-stretch justify-center">
+        {/* Experience Card 1 - EGRONX */}
         <ExperienceCard>
-          <div className="text-cyan-400 font-bold text-base mb-1">(Jul 2024 - Sep 2024)</div>
+          <div className="text-cyan-400 font-bold text-base mb-1">(Aug 2025 - Oct 2025)</div>
           <div className="flex items-center gap-3">
-            <span className="text-2xl text-[#a6c1ee]">📱</span>
-            <span className="font-extrabold text-lg text-white">Android Native Developer Intern</span>
+            <span className="text-2xl text-[#a6c1ee]">🧠</span>
+            <span className="font-extrabold text-lg text-white">AI Engineer Intern</span>
           </div>
-          <div className="text-[#a6c1ee] font-semibold text-base mb-1">Banque Misr</div>
+          <div className="text-[#a6c1ee] font-semibold text-base mb-1">EGRONX</div>
           <div className="text-[#e3e3e3] text-base mt-1">
-            Crafted and deployed Android apps for banking solutions, focusing on secure, user-friendly mobile experiences. Collaborated with cross-functional teams to deliver impactful features for Banque Misr customers.
+            Built RAG applications using LangChain, FastAPI, and Docker within Agile workflows. Developed an AI chatbot for organizational bylaws achieving 96.5% accuracy on a benchmark of 300 curated questions.
           </div>
         </ExperienceCard>
-        {/* Experience Card 2 */}
+        {/* Experience Card 2 - Cellula */}
         <ExperienceCard>
-          <div className="text-cyan-400 font-bold text-base mb-1">(Jul 2025 - Sep 2025)</div>
+          <div className="text-cyan-400 font-bold text-base mb-1">(Aug 2025 - Sep 2025)</div>
           <div className="flex items-center gap-3">
             <span className="text-2xl text-[#a6c1ee]">🤖</span>
             <span className="font-extrabold text-lg text-white">Computer Vision Intern</span>
           </div>
           <div className="text-[#a6c1ee] font-semibold text-base mb-1">Cellula Technologies</div>
           <div className="text-[#e3e3e3] text-base mt-1">
-            Developed computer vision models for real-world applications. Leveraged deep learning to solve image analysis challenges and contributed to innovative AI-driven products.
+            Built water segmentation pipelines for 12-band multispectral satellite imagery, enabling real-time inference through a Flask web application.
+          </div>
+        </ExperienceCard>
+        {/* Experience Card 3 - Banque Misr */}
+        <ExperienceCard>
+          <div className="text-cyan-400 font-bold text-base mb-1">(Aug 2024 - Sep 2024)</div>
+          <div className="flex items-center gap-3">
+            <span className="text-2xl text-[#a6c1ee]">📱</span>
+            <span className="font-extrabold text-lg text-white">Native Android Trainee</span>
+          </div>
+          <div className="text-[#a6c1ee] font-semibold text-base mb-1">Banque Misr</div>
+          <div className="text-[#e3e3e3] text-base mt-1">
+            Developed a money transfer application using Kotlin and Jetpack Compose following MVVM architecture. Ranked among the top 5 projects across the entire internship cohort.
           </div>
         </ExperienceCard>
       </div>
