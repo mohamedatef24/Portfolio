@@ -1,5 +1,11 @@
 import React, { useMemo } from "react";
 
+type CodeToken = {
+  text: string;
+  className: string;
+  href?: string;
+};
+
 const tokenClassMap: Record<string, string> = {
   "code-string": "text-accent font-bold",
   "code-punctuation": "text-foreground/80",
@@ -8,9 +14,34 @@ const tokenClassMap: Record<string, string> = {
   "code-string-skills": "text-accent font-bold",
 };
 
+const renderToken = (token: CodeToken, text: string, key: React.Key) => {
+  const className = tokenClassMap[token.className] || "text-foreground";
+  const isComplete = text === token.text;
+
+  if (token.href && isComplete) {
+    const isMailto = token.href.startsWith("mailto:");
+    return (
+      <a
+        key={key}
+        href={token.href}
+        className={`${className} hover:underline cursor-pointer`}
+        {...(!isMailto && { target: "_blank", rel: "noopener noreferrer" })}
+      >
+        {text}
+      </a>
+    );
+  }
+
+  return (
+    <span key={key} className={className}>
+      {text}
+    </span>
+  );
+};
+
 const AnimatedCodeBlock = () => {
-  // Each line is an array of tokens: { text, className }
-  const codeLines = useMemo(() => [
+  // Each line is an array of tokens: { text, className, href? }
+  const codeLines = useMemo((): CodeToken[][] => [
     [
       { text: 'const', className: 'code-key' },
       { text: ' developer ', className: 'code-this' },
@@ -38,25 +69,25 @@ const AnimatedCodeBlock = () => {
     [
       { text: '  email', className: 'code-key' },
       { text: ': ', className: 'code-punctuation' },
-      { text: "'mo7amed3atf24@gmail.com'", className: 'code-string' },
+      { text: "'mo7amed3atf24@gmail.com'", className: 'code-string', href: 'mailto:mo7amed3atf24@gmail.com' },
       { text: ',', className: 'code-punctuation' },
     ],
     [
       { text: '  github', className: 'code-key' },
       { text: ': ', className: 'code-punctuation' },
-      { text: "'mohamedatef24'", className: 'code-string' },
+      { text: "'mohamedatef24'", className: 'code-string', href: 'https://github.com/mohamedatef24' },
       { text: ',', className: 'code-punctuation' },
     ],
     [
       { text: '  linkedin', className: 'code-key' },
       { text: ': ', className: 'code-punctuation' },
-      { text: "'mohamed-atef-mawad'", className: 'code-string' },
+      { text: "'mohamed-atef-mawad'", className: 'code-string', href: 'https://www.linkedin.com/in/mohamed-atef-mawad/' },
       { text: ',', className: 'code-punctuation' },
     ],
     [
       { text: '  kaggle', className: 'code-key' },
       { text: ': ', className: 'code-punctuation' },
-      { text: "'mo7amed3atf'", className: 'code-string' },
+      { text: "'mo7amed3atf'", className: 'code-string', href: 'https://www.kaggle.com/mo7amed3atf' },
       { text: ',', className: 'code-punctuation' },
     ],
     // AI-related skills, 2 per line, in the requested order
@@ -113,14 +144,7 @@ const AnimatedCodeBlock = () => {
   // Render lines up to current
   const renderedLines = codeLines.slice(0, lineIdx).map((line, i) => (
     <div key={i} className="hero-code-editor-content">
-      {line.map((token, j) => (
-        <span
-          key={j}
-          className={tokenClassMap[token.className] || "text-foreground"}
-        >
-          {token.text}
-        </span>
-      ))}
+      {line.map((token, j) => renderToken(token, token.text, j))}
     </div>
   ));
 
@@ -133,14 +157,7 @@ const AnimatedCodeBlock = () => {
       const token = line[i];
       if (charsLeft > 0) {
         const showLen = Math.min(token.text.length, charsLeft);
-        tokens.push(
-          <span
-            key={i}
-            className={tokenClassMap[token.className] || "text-foreground"}
-          >
-            {token.text.slice(0, showLen)}
-          </span>
-        );
+        tokens.push(renderToken(token, token.text.slice(0, showLen), i));
         charsLeft -= showLen;
       }
     }
