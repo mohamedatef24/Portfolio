@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-mohamed-atef.vercel.app"),
   title: "Mohamed Atef",
   description: "Portfolio of Mohamed Atef, AI Engineer specializing in LLMs, RAG systems, and Agentic AI. Explore projects, skills, certifications, and experience.",
   keywords: [
