@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 
-const SECTION_IDS = ["hero", "about", "projects", "skills", "contact"];
+const SECTION_IDS = [
+  "hero",
+  "about",
+  "experiences",
+  "skills",
+  "projects",
+  "competitions",
+  "certifications",
+  "education",
+  "contact",
+];
 
 export function useScrollSpy() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -11,7 +21,7 @@ export function useScrollSpy() {
         const el = document.getElementById(id);
         if (!el) return Number.POSITIVE_INFINITY;
         const rect = el.getBoundingClientRect();
-        return Math.abs(rect.top - 120); // 120px offset for nav
+        return Math.abs(rect.top - 120);
       });
       const min = Math.min(...offsets);
       setActiveIndex(offsets.indexOf(min));
@@ -24,4 +34,4 @@ export function useScrollSpy() {
   return activeIndex;
 }
 
-export const SECTION_IDS_LIST = SECTION_IDS; 
+export const SECTION_IDS_LIST = SECTION_IDS;

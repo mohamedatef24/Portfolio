@@ -26,11 +26,10 @@ const skills = [
 const TechnicalSkillsSection = () => (
   <>
     <SectionHeader label="Technical Skills" />
-    <section className="mt-12">
-      <h3 className="text-cyan-400 text-xl md:text-2xl font-bold mt-8 mb-6">Technical Skills</h3>
+    <section id="skills" className="mt-12 scroll-mt-24">
       <CircularSkills skills={skills} />
     </section>
   </>
 );
 
-export default TechnicalSkillsSection; 
+export default TechnicalSkillsSection;

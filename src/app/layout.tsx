@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import ThemeProvider from "../components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -57,13 +58,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/my_photo.jpg" type="image/jpeg" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
       </head>
       <body>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

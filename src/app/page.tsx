@@ -7,19 +7,25 @@ import CompetitionsSection from "../components/CompetitionsSection";
 import CertificationsSection from "../components/CertificationsSection";
 import EducationSection from "../components/EducationSection";
 import FooterSection from "../components/FooterSection";
+import ThemeToggle from "../components/ThemeToggle";
+import SectionDotsNav from "../components/SectionDotsNav";
 
 export default function Home() {
   return (
-    <div className="w-4/5 max-w-[1200px] min-w-[320px] mx-auto p-8 pb-16 bg-[#181824] text-[#f3f3f3] font-sans box-border">
-      <Hero />
-      <AboutSection />
-      <ExperiencesSection />
-      <TechnicalSkillsSection />
-      <FeaturedProjectsSection />
-      <CompetitionsSection />
-      <CertificationsSection />
-      <EducationSection />
-      <FooterSection />
-    </div>
+    <>
+      <ThemeToggle />
+      <SectionDotsNav />
+      <div className="w-4/5 max-w-[1200px] min-w-[320px] mx-auto p-8 pb-16 bg-background text-foreground font-sans box-border transition-colors duration-300">
+        <Hero />
+        <AboutSection />
+        <ExperiencesSection />
+        <TechnicalSkillsSection />
+        <FeaturedProjectsSection />
+        <CompetitionsSection />
+        <CertificationsSection />
+        <EducationSection />
+        <FooterSection />
+      </div>
+    </>
   );
 }

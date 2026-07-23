@@ -37,40 +37,81 @@ const projects = [
     link: "https://github.com/mohamedatef24/Spedo-Tranfer-Application",
     linkLabel: "View on GitHub",
     demoLink: null,
-  }
+  },
 ];
 
 const FeaturedProjectsSection = () => (
   <>
     <SectionHeader label="Featured Projects" />
-    <section className="mt-12">
-      <h3 className="text-cyan-400 text-xl md:text-2xl font-bold mt-10 mb-6">Featured Projects</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-6 mt-4">
+    <section id="projects" className="mt-12 scroll-mt-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
         {projects.map((proj) => (
-          <div className="bg-[rgba(35,36,58,0.65)] rounded-2xl shadow-[0_4px_32px_#4fd1c522,0_2px_8px_#23243a55] p-5 text-center transition hover:shadow-[0_8px_32px_#4fd1c555,0_4px_16px_#a6c1ee55] hover:scale-[1.045] border border-cyan-200/20 backdrop-blur-md relative overflow-hidden" key={proj.title}>
-            <Image src={proj.image} alt={proj.title} width={400} height={160} className="w-full h-40 object-full rounded-t-2xl mb-3 bg-[#23243a] shadow-[0_2px_8px_#4fd1c522]" style={{ objectFit: "fill" }} />
-            <div className="text-cyan-400 font-bold text-lg mb-1">{proj.title}</div>
+          <div
+            className="bg-card rounded-2xl shadow-[var(--shadow-glow)] p-5 text-center transition hover:shadow-[var(--shadow-glow-hover)] hover:scale-[1.02] border border-[var(--border)] backdrop-blur-md relative overflow-hidden"
+            key={proj.title}
+          >
+            <Image
+              src={proj.image}
+              alt={proj.title}
+              width={400}
+              height={160}
+              className="w-full h-40 object-cover rounded-t-2xl mb-3 bg-surface shadow-[var(--shadow-glow)]"
+            />
+            <div className="text-accent font-bold text-lg mb-1">{proj.title}</div>
             <div className="flex flex-wrap gap-2 justify-center mb-2">
               {proj.tags.map((tag) => (
-                <span key={tag} className="px-2 py-0.5 rounded-full bg-[#23243a] text-cyan-300 text-xs font-semibold border border-cyan-400/30">{tag}</span>
+                <span
+                  key={tag}
+                  className="px-2 py-0.5 rounded-full bg-surface text-accent text-xs font-semibold border border-accent/30"
+                >
+                  {tag}
+                </span>
               ))}
             </div>
-            <div className="text-[#f3f3f3] text-base mb-2">{proj.desc}</div>
+            <div className="text-foreground text-base mb-2">{proj.desc}</div>
             <div className="flex gap-3 justify-center mt-2">
-              <a href={proj.link} target="_blank" className="inline-block px-5 py-2 bg-cyan-400 text-[#181824] rounded-full font-semibold text-sm no-underline transition hover:bg-[#a6c1ee] hover:text-[#181824] hover:shadow-[0_4px_16px_#a6c1ee55]" rel="noopener noreferrer">{proj.linkLabel}</a>
+              <a
+                href={proj.link}
+                target="_blank"
+                className="inline-block px-5 py-2 bg-accent text-on-accent rounded-full font-semibold text-sm no-underline transition hover:bg-accent-alt hover:shadow-[var(--shadow-glow-hover)]"
+                rel="noopener noreferrer"
+              >
+                {proj.linkLabel}
+              </a>
               {proj.demoLink && (
-                <a href={proj.demoLink} target="_blank" className="inline-block px-5 py-2 bg-pink-400 text-white rounded-full font-semibold text-sm no-underline transition hover:bg-pink-300 hover:shadow-[0_4px_16px_#ff4fa355]" rel="noopener noreferrer">Live Demo</a>
+                <a
+                  href={proj.demoLink}
+                  target="_blank"
+                  className="inline-block px-5 py-2 bg-highlight text-white rounded-full font-semibold text-sm no-underline transition hover:opacity-90"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo
+                </a>
               )}
             </div>
           </div>
         ))}
       </div>
-      <div className="flex gap-4 mt-8 justify-center">
-        <a href="https://github.com/mohamedatef24?tab=repositories" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-cyan-400 text-[#181824] rounded-full font-semibold text-base no-underline transition hover:bg-[#a6c1ee] hover:text-[#181824] hover:shadow-[0_4px_16px_#a6c1ee55]">More on GitHub</a>
-        <a href="https://www.kaggle.com/mo7amed3atf/code" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-cyan-400 text-[#181824] rounded-full font-semibold text-base no-underline transition hover:bg-[#a6c1ee] hover:text-[#181824] hover:shadow-[0_4px_16px_#a6c1ee55]">More on Kaggle</a>
+      <div className="flex gap-4 mt-8 justify-center flex-wrap">
+        <a
+          href="https://github.com/mohamedatef24?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-2 bg-accent text-on-accent rounded-full font-semibold text-base no-underline transition hover:bg-accent-alt hover:shadow-[var(--shadow-glow-hover)]"
+        >
+          More on GitHub
+        </a>
+        <a
+          href="https://www.kaggle.com/mo7amed3atf/code"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-2 bg-accent text-on-accent rounded-full font-semibold text-base no-underline transition hover:bg-accent-alt hover:shadow-[var(--shadow-glow-hover)]"
+        >
+          More on Kaggle
+        </a>
       </div>
     </section>
   </>
 );
 
-export default FeaturedProjectsSection; 
+export default FeaturedProjectsSection;

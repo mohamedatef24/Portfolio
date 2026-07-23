@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 
 const tokenClassMap: Record<string, string> = {
-  "code-string": "text-cyan-400 font-bold",
-  "code-punctuation": "text-white",
-  "code-key": "text-pink-400 font-bold",
-  "code-this": "text-green-600 italic font-bold",
-  "code-string-skills": "bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent font-bold",
+  "code-string": "text-accent font-bold",
+  "code-punctuation": "text-foreground/80",
+  "code-key": "text-highlight font-bold",
+  "code-this": "text-accent-alt italic font-bold",
+  "code-string-skills": "text-accent font-bold",
 };
 
 const AnimatedCodeBlock = () => {
@@ -116,7 +116,7 @@ const AnimatedCodeBlock = () => {
       {line.map((token, j) => (
         <span
           key={j}
-          className={tokenClassMap[token.className] || "text-white"}
+          className={tokenClassMap[token.className] || "text-foreground"}
         >
           {token.text}
         </span>
@@ -136,7 +136,7 @@ const AnimatedCodeBlock = () => {
         tokens.push(
           <span
             key={i}
-            className={tokenClassMap[token.className] || "text-white"}
+            className={tokenClassMap[token.className] || "text-foreground"}
           >
             {token.text.slice(0, showLen)}
           </span>
