@@ -3,6 +3,7 @@ import AboutSection from "../components/AboutSection";
 import ExperiencesSection from "../components/ExperiencesSection";
 import TechnicalSkillsSection from "../components/TechnicalSkillsSection";
 import FeaturedProjectsSection from "../components/FeaturedProjectsSection";
+import CompetitionsSection from "../components/CompetitionsSection";
 import CertificationsSection from "../components/CertificationsSection";
 import EducationSection from "../components/EducationSection";
 import FooterSection from "../components/FooterSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <ExperiencesSection />
       <TechnicalSkillsSection />
       <FeaturedProjectsSection />
+      <CompetitionsSection />
       <CertificationsSection />
       <EducationSection />
       <FooterSection />

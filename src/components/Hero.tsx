@@ -17,7 +17,7 @@ const Hero = () => (
       <div className="text-3xl md:text-4xl font-extrabold text-pink-400 mb-2">
         This is <span className="text-pink-400">Mohamed Atef</span>
       </div>
-      <div className="text-lg md:text-xl font-bold text-white mb-2">I&apos;m a <span className="text-cyan-400 font-extrabold text-2xl md:text-3xl">Machine Learning Engineer</span></div>
+      <div className="text-lg md:text-xl font-bold text-white mb-2">I&apos;m an <span className="text-cyan-400 font-extrabold text-2xl md:text-3xl">AI Engineer</span></div>
       <div className="flex flex-col md:flex-row gap-4 mt-6 w-full md:w-auto justify-center md:justify-start">
         <button
           className="flex items-center gap-2 px-7 py-3 rounded-full text-base font-bold bg-gradient-to-r from-[#23243a] to-[#4fd1c5] text-white shadow-md transition hover:from-[#4fd1c5] hover:to-[#23243a] hover:shadow-lg w-full md:w-auto justify-center cursor-pointer duration-300"
@@ -29,7 +29,7 @@ const Hero = () => (
           CONTACT ME <span>👤</span>
         </button>
         <a
-          href="https://drive.google.com/file/d/1sGIb6UKb-PEwa61JbFVgr2vUIHkeSFur/view?usp=sharing"
+          href="https://drive.google.com/file/d/1iKvhKraxkWjKDUwLVlVWkhKoP3WQtETS/view?usp=sharing"
           className="flex items-center gap-2 px-7 py-3 rounded-full text-base font-bold bg-gradient-to-r from-[#ff4fa3] to-[#a6c1ee] text-white shadow-md transition hover:from-[#a6c1ee] hover:to-[#ff4fa3] hover:shadow-lg w-full md:w-auto justify-center md:justify-start duration-300"
           target="_blank"
           rel="noopener noreferrer"
